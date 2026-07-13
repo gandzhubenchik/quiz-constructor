@@ -1,0 +1,222 @@
+:root {
+  --bg-main: #0f172a;
+  --bg-card: #1e293b;
+  --accent: #8b5cf6;
+  --accent-hover: #a78bfa;
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
+  --success: #10b981;
+  --error: #ef4444;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text);
+  background-image: radial-gradient(circle at 50% 50%, #1e1b4b 0%, #0f172a 100%);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 2px solid #334155;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.theme-cyberpunk {
+  background: #090514;
+  border: 2px solid #ff007f !important;
+  box-shadow: 0 0 15px rgba(255, 0, 127, 0.2);
+}
+.theme-cyberpunk h2, .theme-cyberpunk h3 {
+  color: #00ffff;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+}
+.theme-cyberpunk .option-btn {
+  background: #140c2a;
+  border: 1px solid #00ffff;
+}
+.theme-cyberpunk .option-btn:hover {
+  background: #ff007f;
+  color: #fff;
+}
+
+.theme-space {
+  background: linear-gradient(145deg, #0b0f19, #1e112a);
+  border: 2px solid #3b82f6 !important;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+}
+.theme-space h2, .theme-space h3 {
+  color: #a855f7;
+}
+.theme-space .option-btn {
+  background: #1e1b4b;
+  border: 1px solid #3b82f6;
+}
+.theme-space .option-btn:hover {
+  background: #3b82f6;
+}
+
+.theme-nature {
+  background: linear-gradient(145deg, #061a12, #0d2e1f);
+  border: 2px solid #10b981 !important;
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.25);
+}
+.theme-nature h2, .theme-nature h3 {
+  color: #34d399;
+  text-shadow: 0 0 8px rgba(52, 211, 153, 0.4);
+}
+.theme-nature .option-btn {
+  background: #0b241b;
+  border: 1px solid #10b981;
+}
+.theme-nature .option-btn:hover {
+  background: #10b981;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+}
+
+.theme-retro {
+  background: linear-gradient(145deg, #1c140e, #2d1f14);
+  border: 2px solid #fbbf24 !important;
+  box-shadow: 0 0 15px rgba(251, 191, 36, 0.25);
+}
+.theme-retro h2, .theme-retro h3 {
+  color: #fef08a;
+  text-shadow: 0 0 8px rgba(254, 240, 138, 0.3);
+}
+.theme-retro .option-btn {
+  background: #24180f;
+  border: 1px solid #fbbf24;
+}
+.theme-retro .option-btn:hover {
+  background: #fbbf24;
+  color: #1e150a;
+  font-weight: bold;
+}
+
+.theme-grammo {
+  background: linear-gradient(145deg, #071126, #0f2347);
+  border: 2px solid #22d3ee !important;
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.25);
+}
+.theme-grammo h2, .theme-grammo h3 {
+  color: #e0f2fe;
+  text-shadow: 0 0 8px rgba(34, 211, 238, 0.3);
+}
+.theme-grammo .option-btn {
+  background: #0a1936;
+  border: 1px solid #22d3ee;
+}
+.theme-grammo .option-btn:hover {
+  background: #06b6d4;
+  color: #fff;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 8px;
+  background: #334155;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #f59e0b, #ef4444);
+  transition: width 1s linear;
+}
+
+.btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn:hover {
+  background: var(--accent-hover);
+}
+
+.btn-secondary {
+  background: #334155;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-muted);
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  background: #0f172a;
+  border: 2px solid #334155;
+  border-radius: 8px;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.input-field:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.option-btn {
+  background: #334155;
+  color: #fff;
+  border: 2px solid transparent;
+  padding: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: left;
+  transition: all 0.2s;
+}
